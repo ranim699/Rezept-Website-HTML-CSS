@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recipe Corner – simple home-cooked recipes for every day.">
+  <title>Recipe Corner – Home</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Recipe Corner</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Cook something good today</h1>
+        <p>Simple, tested recipes from breakfast to dessert – with a servings calculator and step-by-step checklists.</p>
+        <a class="btn" href="recipes.html">Browse all recipes</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured recipes</h2>
+        <!-- Filled by js/main.js -->
+        <div class="card-grid" id="featured-recipes"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container about">
+        <figure class="chef">
+          <img src="images/chef-ranim.jpg" alt="Ranim, the chef of Recipe Corner, smiling in a brown blazer" width="720" height="945" loading="lazy">
+          <figcaption>
+            <strong>Ranim</strong>
+            <span>Chef at Recipe Corner</span>
+          </figcaption>
+        </figure>
+        <div>
+          <h2>Meet the chef</h2>
+          <p>Ranim is the chef behind Recipe Corner. The site collects everyday dishes that are easy to cook at home. Every recipe lists the cooking time and difficulty, and you can change the number of servings – the ingredient amounts are recalculated automatically.</p>
+          <p>Have a favourite recipe you would like to share? Send it to us via the contact page.</p>
+          <a class="btn btn-outline" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Recipe Corner</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

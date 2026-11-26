@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All recipes on Recipe Corner – search by name or ingredient.">
+  <title>Recipe Corner – Recipes</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Recipe Corner</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="section-title">All recipes</h1>
+
+      <div class="filter-bar">
+        <div>
+          <label class="visually-hidden" for="search">Search recipes</label>
+          <input class="search-input" type="search" id="search" placeholder="Search by name or ingredient…">
+        </div>
+        <div class="filter-buttons" role="group" aria-label="Filter by category">
+          <button class="filter-btn is-active" type="button" data-category="All" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-category="Breakfast" aria-pressed="false">Breakfast</button>
+          <button class="filter-btn" type="button" data-category="Main dish" aria-pressed="false">Main dish</button>
+          <button class="filter-btn" type="button" data-category="Soup" aria-pressed="false">Soup</button>
+          <button class="filter-btn" type="button" data-category="Dessert" aria-pressed="false">Dessert</button>
+        </div>
+      </div>
+
+      <p id="result-count" aria-live="polite"></p>
+      <!-- Filled by js/main.js -->
+      <div class="card-grid" id="recipe-list"></div>
+      <p class="empty-message" id="empty-message" hidden>No recipe matches your search. Try another word.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Recipe Corner</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
